@@ -1,0 +1,49 @@
+%%%%%%%%%%%%%%%%%%%%%%%% 
+%       SETTINGS       %
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt,twoside]{scrartcl}
+
+\input{settings/scrarticle-settings.tex}
+
+\input{settings/text-settings}
+
+\begin{document}
+
+%%%%%%%%%%%%%
+%   Title   % 
+%%%%%%%%%%%%%
+
+\subject{Essay}
+\title{Titel over two \newlineTitle lines}	% change title
+\author{Max Mustermann}	% change name
+\affiliation{
+		Matrikelnummer: 123456789\\	% change Matrikelnummer
+    Studiengang: BSc Neue Ätherwissenschaften \\ % change Studiengang
+		\url{mustermann@uni-tuebingen.de}\\	% change email address
+		Seminar: Seminar name, University of Tübingen, WS 2020/2021}
+
+\maketitle 
+
+%%%%%%%%%%%%%%%%%%%%%%
+%   Document start   % 
+%%%%%%%%%%%%%%%%%%%%%%
+
+\input{examples/essay-examples.tex}
+
+\section{Blindtext}
+
+\lipsum
+
+%%%%%%%%%%%%%%%%%%%
+%   Document end  % 
+%%%%%%%%%%%%%%%%%%%
+
+\insertBib
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
