@@ -271,28 +271,13 @@
 \usepackage{linguex}
 \renewcommand{\firstrefdash}{}
 
-\usepackage{packages/avm}
+\usepackage{packages/langsci-avm}
 %%%%%%%%%%%%%%%%%%%%%%
 %   AVM SETTINGS     % 
 %%%%%%%%%%%%%%%%%%%%%%
 
-\avmoptions{center,topright}  % topright determines the position of \osort
-\avmfont{\scshape}
-\avmvalfont{\normalfont}
-\avmsortfont{\normalfont\itshape}
+% none
 
-\newenvironment{topbot}{   	% more flexible than /newcommand ?
-	\avmvskip{0.2ex} 
-	\hspace{-1.5em}
-	\begin{avm}
-	\avml
-	}
-	%%%
-	{
-	\avmr
-    \end{avm}
-    \hspace{-0.5em}
-}
 
 % \usepackage[inference]{semantic} % for CCG 
 % \usepackage{packages/ccg}

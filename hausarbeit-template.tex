@@ -1,9 +1,8 @@
 \documentclass[
-11pt,
-bibliography=totoc,
-numbers=noenddot,
-% draft
-]{scrbook}
+  11pt,
+  bibliography=totoc,
+  numbers=noenddot,
+  ]{scrbook}
 
 %%%%%%%%%%%%%%%%%%%%%%%% 
 %       SETTINGS       %
@@ -38,9 +37,14 @@ numbers=noenddot,
 \date{\ddmmyyyydate\today, \currenttime}
 \publishers{Seminarart \\ Seminartitel \\ Semester Jahr}
 
-%%%%%%%%%%%%%%%%
-%   Document   % 
-%%%%%%%%%%%%%%%%
+% comment for final version
+\usepackage{draftwatermark}
+\SetWatermarkScale{1}
+\AtBeginDocument{\SetWatermarkText{DRAFT}}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%   Document start   % 
+%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
@@ -63,8 +67,21 @@ numbers=noenddot,
 %  Document end   % 
 %%%%%%%%%%%%%%%%%%% 
 
-\addbibresource[datatype=bibtex]{references.bib} % BibLaTeX
 \insertBib
+
+\chapter*{Erklärung}
+
+Hiermit erkläre ich, dass ich die vorliegende Arbeit selbstständig verfasst und keine anderen Hilfsmittel als die angegebenen verwendet habe.
+
+Insbesondere versichere ich, dass ich alle wörtlichen und sinngemäßen Übernahmen aus anderen Werken als solche kenntlich gemacht habe.
+
+\vspace{10ex}
+
+\noindent
+\begin{tabular}{lcl}
+\rule{6cm}{1pt} & \hspace{1cm} & \rule{6cm}{1pt} \\
+Ort/Datum & & Unterschrift
+\end{tabular}
 
 \end{document}
 
