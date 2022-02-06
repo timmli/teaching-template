@@ -41,7 +41,7 @@ test_essay:
 			latexmk -pdf essay-template.tex
 
 release_essay:
-	rm -fr tmp
+	rm -fr temp
 	mkdir temp
 	cp -r --parents $(ESSAY_FILES) temp
 	cd temp; zip -r essay-template.zip *; mv essay-template.zip ..
