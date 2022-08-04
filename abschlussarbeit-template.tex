@@ -1,18 +1,24 @@
 \documentclass[
   11pt,
-  twoside,
-  ]{scrartcl}
+  bibliography=totoc,
+  numbers=noenddot,
+  ]{scrbook}
 
 %%%%%%%%%%%%%%%%%%%%%%%% 
 %       SETTINGS       %
-%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% 
 
-\input{settings/scrarticle-settings.tex}
+\usepackage{datetime}
+
 \input{settings/text-settings}
 
 \AtBeginDocument{
   \selectlanguage{german} % which language is available depends on how babel is loaded
 }
+
+%%%%%%%%%%%%%%
+%   Macros   % 
+%%%%%%%%%%%%%%
 
 \input{myMacros}   % the content of myMacros.tex goes here
 
@@ -20,16 +26,16 @@
 %   Title   % 
 %%%%%%%%%%%%%
 
-\subject{Essay}
-\title{Titel over two \newlineTitle lines}	% change title
-\author{Max Mustermann}	% change name
-\affiliation{
-		Matrikelnummer: 123456789\\	% change Matrikelnummer
-    Studiengang: BSc Neue Ätherwissenschaften \\ % change Studiengang
-		Emailaddresse: \url{mustermann@uni-tuebingen.de}\\[1ex]	% change email address
-		Seminar: Seminarname, Universität Tübingen, WS 2021/2022\\ % change seminar and date
-    Datum der Fassung: \today, \currenttime
-}
+\subject{Typ der Abschlussarbeit}
+\title{Titel}
+\author{{\LARGE Max Mustermann} \\
+		\\
+		Matrikelnummer: 123456789\\
+		Studiengang: BSc Neue Ätherwissenschaften \\
+		\url{mustermann@uni-tuebingen.de}\\ 
+		Eberhard-Karls-Universität Tübingen\\}  
+\date{\ddmmyyyydate\today, \currenttime}
+\publishers{Betreuerteam \\ Prof. Dr. Martina Musterfrau}
 
 % comment for final version
 \usepackage{draftwatermark}
@@ -42,21 +48,28 @@
 
 \begin{document}
 
-\maketitle 
+\maketitle
+\frontmatter
+\tableofcontents
+\mainmatter 
 
-\input{examples/essay-examples.tex}
+\input{examples/abschlussarbeit-examples}
 
-\section{Blindtext}
+\chapter{Blindtext}
 
 \lipsum
 
-%%%%%%%%%%%%%%%%%%%
-%   Document end  % 
-%%%%%%%%%%%%%%%%%%%
+\section{Blindtext section}
+
+\lipsum
+
+%%%%%%%%%%%%%%%%%%% 
+%  Document end   % 
+%%%%%%%%%%%%%%%%%%% 
 
 \insertBib
 
-\section*{Erklärung}
+\chapter*{Erklärung}
 
 Hiermit erkläre ich, dass ich die vorliegende Arbeit selbstständig verfasst und keine anderen Hilfsmittel als die angegebenen verwendet habe.
 

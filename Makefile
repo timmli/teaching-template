@@ -1,12 +1,37 @@
 SHELL := /bin/bash
 
-HAUSARBEIT_FILES =  myMacros.tex \
+ABSCHLUSSARBEIT_FILES =  myMacros.tex \
 	settings/text-settings.tex \
 	$(wildcard packages/*.sty) \
-	examples/hausarbeit-examples.tex \
+	examples/abschlussarbeit-examples.tex \
 	$(wildcard bst/biblatex-sp-unified/[^.]*) \
-	hausarbeit-template.tex \
+	abschlussarbeit-template.tex \
 	references.bib
+
+test_abschlussarbeit:
+	rm -fr test
+	mkdir test
+	cp -r --parents $(ABSCHLUSSARBEIT_FILES) test
+	cd test; \
+			latexmk -pdf abschlussarbeit-template.tex
+
+release_abschlussarbeit:
+	rm -fr temp
+	mkdir temp
+	cp -r --parents $(ABSCHLUSSARBEIT_FILES) temp
+	cd temp; zip -r abschlussarbeit-template.zip *; mv abschlussarbeit-template.zip ..
+	rm -fr temp
+
+#-------------------------------------------------------------------------------
+
+HAUSARBEIT_FILES =  myMacros.tex \
+	settings/text-settings.tex \
+	settings/scrarticle-settings.tex \
+	$(wildcard packages/*.sty) \
+	examples/hausarbeit-examples.tex  \
+	$(wildcard bst/biblatex-sp-unified/[^.]*) \
+	references.bib \
+  hausarbeit-template.tex
 
 test_hausarbeit:
 	rm -fr test
@@ -22,34 +47,9 @@ release_hausarbeit:
 	cd temp; zip -r hausarbeit-template.zip *; mv hausarbeit-template.zip ..
 	rm -fr temp
 
-#-------------------------------------------------------------------------------
-
-ESSAY_FILES =  myMacros.tex \
-	settings/text-settings.tex \
-	settings/scrarticle-settings.tex \
-	$(wildcard packages/*.sty) \
-	examples/essay-examples.tex  \
-	$(wildcard bst/biblatex-sp-unified/[^.]*) \
-	references.bib \
-  essay-template.tex
-
-test_essay:
-	rm -fr test
-	mkdir test
-	cp -r --parents $(ESSAY_FILES) test
-	cd test; \
-			latexmk -pdf essay-template.tex
-
-release_essay:
-	rm -fr temp
-	mkdir temp
-	cp -r --parents $(ESSAY_FILES) temp
-	cd temp; zip -r essay-template.zip *; mv essay-template.zip ..
-	rm -fr temp
-
 
 #-------------------------------------------------------------------------------
 
-release_all: release_hausarbeit release_essay
+release_all: release_abschlussarbeit release_hausarbeit
 
-test_all: test_hausarbeit test_essay
+test_all: test_abschlussarbeit test_hausarbeit
