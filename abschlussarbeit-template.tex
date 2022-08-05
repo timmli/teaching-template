@@ -5,7 +5,7 @@
   ]{scrbook}
 
 %%%%%%%%%%%%%%%%%%%%%%%% 
-%       SETTINGS       %
+% SETTINGS
 %%%%%%%%%%%%%%%%%%%%%%%% 
 
 \usepackage{datetime}
@@ -16,24 +16,24 @@
   \selectlanguage{german} % which language is available depends on how babel is loaded
 }
 
-%%%%%%%%%%%%%%
-%   Macros   % 
-%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% 
+% Macros
+%%%%%%%%%%%%%% 
 
 \input{myMacros}   % the content of myMacros.tex goes here
 
-%%%%%%%%%%%%%
-%   Title   % 
-%%%%%%%%%%%%%
+%%%%%%%%%%%%% 
+% Title
+%%%%%%%%%%%%% 
 
 \subject{Typ der Abschlussarbeit}
 \title{Titel}
 \author{{\LARGE Max Mustermann} \\
-		\\
-		Matrikelnummer: 123456789\\
-		Studiengang: BSc Neue Ätherwissenschaften \\
-		\url{mustermann@uni-tuebingen.de}\\ 
-		Eberhard-Karls-Universität Tübingen\\}  
+  \\
+  Matrikelnummer: 123456789\\
+  Studiengang: BSc Neue Ätherwissenschaften \\
+  \url{mustermann@uni-tuebingen.de}\\ 
+  Eberhard-Karls-Universität Tübingen\\}  
 \date{\ddmmyyyydate\today, \currenttime}
 \publishers{Betreuerteam \\ Prof. Dr. Martina Musterfrau}
 
@@ -42,9 +42,9 @@
 \SetWatermarkScale{1}
 \AtBeginDocument{\SetWatermarkText{DRAFT}}
 
-%%%%%%%%%%%%%%%%%%%%%%
-%   Document start   % 
-%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% 
+% Document start
+%%%%%%%%%%%%%%%%%%%%%% 
 
 \begin{document}
 
@@ -64,7 +64,7 @@
 \lipsum
 
 %%%%%%%%%%%%%%%%%%% 
-%  Document end   % 
+% Document end
 %%%%%%%%%%%%%%%%%%% 
 
 \insertBib
@@ -79,8 +79,8 @@ Insbesondere versichere ich, dass ich alle wörtlichen und sinngemäßen Überna
 
 \noindent
 \begin{tabular}{lcl}
-\rule{6cm}{1pt} & \hspace{1cm} & \rule{6cm}{1pt} \\
-Ort/Datum & & Unterschrift
+  \rule{6cm}{1pt} & \hspace{1cm} & \rule{6cm}{1pt} \\
+  Ort/Datum & & Unterschrift
 \end{tabular}
 
 \end{document}

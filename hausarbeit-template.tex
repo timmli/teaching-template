@@ -4,8 +4,8 @@
   ]{scrartcl}
 
 %%%%%%%%%%%%%%%%%%%%%%%% 
-%       SETTINGS       %
-%%%%%%%%%%%%%%%%%%%%%%%%
+% SETTINGS
+%%%%%%%%%%%%%%%%%%%%%%%% 
 
 \input{settings/scrarticle-settings.tex}
 \input{settings/text-settings}
@@ -16,19 +16,19 @@
 
 \input{myMacros}   % the content of myMacros.tex goes here
 
-%%%%%%%%%%%%%
-%   Title   % 
-%%%%%%%%%%%%%
+%%%%%%%%%%%%% 
+% Title
+%%%%%%%%%%%%% 
 
 \subject{Hausarbeit}
 \title{Titel over two \newlineTitle lines}	% change title
 \author{Max Mustermann}	% change name
 \affiliation{
-		Matrikelnummer: 123456789\\	% change Matrikelnummer
-    Studiengang: BSc Neue Ätherwissenschaften \\ % change Studiengang
-		Emailaddresse: \url{mustermann@uni-tuebingen.de}\\[1ex]	% change email address
-		Seminar: Seminarname, Universität Tübingen, WS 2021/2022\\ % change seminar and date
-    Datum der Fassung: \today, \currenttime
+  Matrikelnummer: 123456789\\	% change Matrikelnummer
+  Studiengang: BSc Neue Ätherwissenschaften \\ % change Studiengang
+  Emailaddresse: \url{mustermann@uni-tuebingen.de}\\[1ex]	% change email address
+  Seminar: Seminarname, Universität Tübingen, WS 2021/2022\\ % change seminar and date
+  Datum der Fassung: \today, \currenttime
 }
 
 % comment for final version
@@ -36,9 +36,9 @@
 \SetWatermarkScale{1}
 \AtBeginDocument{\SetWatermarkText{DRAFT}}
 
-%%%%%%%%%%%%%%%%%%%%%%
-%   Document start   % 
-%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% 
+% Document start
+%%%%%%%%%%%%%%%%%%%%%% 
 
 \begin{document}
 
@@ -50,9 +50,9 @@
 
 \lipsum
 
-%%%%%%%%%%%%%%%%%%%
-%   Document end  % 
-%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%% 
+% Document end
+%%%%%%%%%%%%%%%%%%% 
 
 \insertBib
 
@@ -66,8 +66,8 @@ Insbesondere versichere ich, dass ich alle wörtlichen und sinngemäßen Überna
 
 \noindent
 \begin{tabular}{lcl}
-\rule{6cm}{1pt} & \hspace{1cm} & \rule{6cm}{1pt} \\
-Ort/Datum & & Unterschrift
+  \rule{6cm}{1pt} & \hspace{1cm} & \rule{6cm}{1pt} \\
+  Ort/Datum & & Unterschrift
 \end{tabular}
 
 \end{document}
