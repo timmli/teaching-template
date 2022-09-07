@@ -2,9 +2,10 @@ SHELL := /bin/bash
 
 ABSCHLUSSARBEIT_FILES =  myMacros.tex \
 	settings/text-settings.tex \
+  settings/muss.bbx \
+  settings/muss.cbx \
 	$(wildcard packages/*.sty) \
 	examples/abschlussarbeit-examples.tex \
-	$(wildcard bst/biblatex-sp-unified/[^.]*) \
 	abschlussarbeit-template.tex \
 	references.bib
 
@@ -27,9 +28,10 @@ release_abschlussarbeit:
 HAUSARBEIT_FILES =  myMacros.tex \
 	settings/text-settings.tex \
 	settings/scrarticle-settings.tex \
+  settings/muss.bbx \
+  settings/muss.cbx \
 	$(wildcard packages/*.sty) \
 	examples/hausarbeit-examples.tex  \
-	$(wildcard bst/biblatex-sp-unified/[^.]*) \
 	references.bib \
   hausarbeit-template.tex
 
