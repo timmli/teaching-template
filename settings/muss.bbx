@@ -149,7 +149,7 @@
   }%
   \printfield{booktitleaddon}}
 
-\renewbibmacro*{muss:byeditor+others}{%
+\newbibmacro*{muss:byeditor+others}{%
   \ifnameundef{editor}
   {}
   {\printnames[byeditor]{editor}% don't swap name parts of first editor
@@ -158,7 +158,7 @@
   }%
 }
 
-\renewbibmacro*{muss:editor+others}{%
+\newbibmacro*{muss:editor+others}{%
   \ifnameundef{editor}
   {}
   {\printnames{editor}% swap name parts of first editor
